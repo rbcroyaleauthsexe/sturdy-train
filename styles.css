@@ -1,0 +1,74 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type="checkbox"]:checked + label > div > svg {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .bigDiv {
+    position: relative;
+    left: 48%;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .smobile {
+    width: 102%;
+  }
+  .img {
+    width: 150pc;
+  }
+  .bigDiv {
+    position: relative;
+    width: 50%;
+    left: 24%;
+  }
+  .input {
+    width: 95%;
+  }
+  
+  .question {
+    margin-left: 140px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  .smobile {
+    width: 102%;
+  }
+  .img {
+    width: 150pc;
+  }
+  /* .bigDiv {
+    position: relative;
+    left: 48%;
+  } */
+  .input {
+    width: 95%;
+  }
+  .input1 {
+    width: 97%;
+  }
+  .question {
+    margin-left: 140px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .img {
+    width: 100vw;
+  }
+  .input {
+    width: 95%;
+  }
+  .input1 {
+    width: 97%;
+  }
+  .question {
+    margin-left: 145px;
+  }
+}
